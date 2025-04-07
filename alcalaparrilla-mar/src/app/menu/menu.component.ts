@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
   word = 0;
-  seccionMenu = '';
+  seccionMenu = ' Vacioosss';
 
   ramdomWord() {
     this.word = Math.floor(Math.random() * 3);

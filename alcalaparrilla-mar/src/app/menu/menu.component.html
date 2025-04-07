@@ -8,12 +8,12 @@
         <nav>
             <li class="tm-paging-item"><a href="#" class="tm-paging-link active">Menu</a></li>
             <ul>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu=='Entradas'">Entradas</a></li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu=='Parrilla'">Parrilla </a> </li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu=='Pescado'">Pescados_y_Mariscos</a></li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu=='Infantil'">Infantil</a></li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu=='Adicionales'">Adicionales</a></li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu=='Bebidas'">Bebidas</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Entradas'">Entradas</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Parrilla'">Parrilla </a> </li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Pescados'">Pescados_y_Mariscos</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Infantil'">Infantil</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Adicionales'">Adicionales</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Bebidas'">Bebidas</a></li>
             </ul>
         </nav>
     </div>
@@ -32,12 +32,11 @@
                     <b>Tranquilidad</b>
                 }
               </span>
-              
         </div>
 @switch (seccionMenu) {
     @case ('Entradas') {
         <!-- gallery page 1 -->
-        <div id="tm-gallery-page-entradas" class="tm-gallery-page hidden">
+        <div id="tm-gallery-page-entradas">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                 <figure>
                     <img src="img/gallery/01.jpg" alt="Image" class="img-alcala tm-gallery-img" />
@@ -92,7 +91,7 @@
     }
     @case ('Parrilla') {
         <!-- gallery page 2 -->
-        <div id="tm-gallery-page-parrilla" class="tm-gallery-page hidden">
+        <div id="tm-gallery-page-parrilla">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
@@ -247,7 +246,7 @@
             </article>
         </div> <!-- gallery page 2 -->
     }
-}
+    @case ('Pescados') {
         <!-- gallery page 3 -->
         <div id="tm-gallery-page-pescados_y_mariscos" class="tm-gallery-page hidden">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
@@ -368,6 +367,8 @@
                 </figure>
             </article>
         </div> <!-- gallery page 3 -->
+    }
+    @case ('Adicionales') {
         <!-- gallery page 4 -->
         <div id="tm-gallery-page-adicionales" class="tm-gallery-page hidden">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
@@ -421,6 +422,8 @@
                 </figure>
             </article>
         </div>
+    }
+    @case ('Infantil') {
         <!-- gallery page 5 -->
         <div id="tm-gallery-page-infantil" class="tm-gallery-page hidden">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
@@ -434,6 +437,8 @@
                 </figure>
             </article>
         </div>
+        }
+        @case ('Bebidas') {
         <!-- gallery page 6 -->
         <div id="tm-gallery-page-bebidas" class="tm-gallery-page hidden">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
@@ -527,7 +532,11 @@
                 </figure>
             </article>
         </div>
-    </div>
+    }
+}
+        
+        
+</div>
     <div class="tm-section tm-container-inner">
         <div class="row">
             <div class="col-md-6">

@@ -8,12 +8,12 @@
         <nav>
             <li class="tm-paging-item"><a href="#" class="tm-paging-link active">Menu</a></li>
             <ul>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Entradas'">Entradas</a></li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Parrilla'">Parrilla </a> </li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Pescados'">Pescados_y_Mariscos</a></li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Infantil'">Infantil</a></li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Adicionales'">Adicionales</a></li>
-                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Bebidas'">Bebidas</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='En'">Entradas</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Pa'">Parrilla </a> </li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Pes'">Pescados_y_Mariscos</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Infa'">Infantil</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Adi'">Adicionales</a></li>
+                <li class="tm-paging-item"><a class="tm-paging-link" (click)="seccionMenu='Bebi'">Bebidas</a></li>
             </ul>
         </nav>
     </div>
@@ -33,8 +33,11 @@
                 }
               </span>
         </div>
+    </div>
+    <br>
+
 @switch (seccionMenu) {
-    @case ('Entradas') {
+    @case ('En') {
         <!-- gallery page 1 -->
         <div id="tm-gallery-page-entradas">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
@@ -89,7 +92,7 @@
             </article>
         </div> <!-- gallery page 1 -->
     }
-    @case ('Parrilla') {
+    @case ('Pa') {
         <!-- gallery page 2 -->
         <div id="tm-gallery-page-parrilla">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
@@ -246,9 +249,9 @@
             </article>
         </div> <!-- gallery page 2 -->
     }
-    @case ('Pescados') {
+    @case ('Pes') {
         <!-- gallery page 3 -->
-        <div id="tm-gallery-page-pescados_y_mariscos" class="tm-gallery-page hidden">
+        <div id="tm-gallery-page-pescados_y_mariscos">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
@@ -368,9 +371,9 @@
             </article>
         </div> <!-- gallery page 3 -->
     }
-    @case ('Adicionales') {
+    @case ('Adi') {
         <!-- gallery page 4 -->
-        <div id="tm-gallery-page-adicionales" class="tm-gallery-page hidden">
+        <div id="tm-gallery-page-adicionales">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                 <figure>
                     <img src="img/gallery/04.jpg" alt="Image" class="img-alcala tm-gallery-img" />
@@ -423,9 +426,9 @@
             </article>
         </div>
     }
-    @case ('Infantil') {
+    @case ('Infa') {
         <!-- gallery page 5 -->
-        <div id="tm-gallery-page-infantil" class="tm-gallery-page hidden">
+        <div id="tm-gallery-page-infantil">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                 <figure>
                     <img src="img/gallery/04.jpg" alt="Image" class="img-alcala tm-gallery-img" />
@@ -438,9 +441,9 @@
             </article>
         </div>
         }
-        @case ('Bebidas') {
+        @case ("Bebi") {
         <!-- gallery page 6 -->
-        <div id="tm-gallery-page-bebidas" class="tm-gallery-page hidden">
+        <div id="tm-gallery-page-bebidas">
             <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida1.jpeg" alt="Image" class="img-alcala tm-gallery-img" />
@@ -536,8 +539,8 @@
 }
         
         
-</div>
-    <div class="tm-section tm-container-inner">
+
+<div class="tm-section tm-container-inner">
         <div class="row">
             <div class="col-md-6">
                 <figure class="tm-description-figure">

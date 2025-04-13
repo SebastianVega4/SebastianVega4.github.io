@@ -1,62 +1,59 @@
-# SebastianVega4.github.io
-Page Html donde trabajo ALCALA RESTAURANTE
+# AlcalaparrillaMar
 
-# 🍽️ Alcalá Parrilla y Mar — Proyecto Web con Angular 17
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
 
-Este repositorio contiene el desarrollo de una página web moderna y escalable para el restaurante **Alcalá Parrilla y Mar**, como parte de un proyecto personal llevado a cabo por **Sebastián Vega**. La aplicación está construida utilizando **Angular 17**, aplicando buenas prácticas de desarrollo frontend, arquitectura modular y diseño responsive, con el objetivo de convertirse en un sitio web real y funcional para el restaurante, e incluso evolucionar más adelante como parte de mi portafolio profesional.
+## Development server
 
----
+To start a local development server, run:
 
-## 🎯 Objetivo del Proyecto
-
-El objetivo principal de este proyecto es consolidar conocimientos en el desarrollo de aplicaciones web modernas utilizando **Angular**, mientras se diseña una experiencia visual atractiva y profesional que represente fielmente la identidad de un restaurante especializado en parrilla y cocina de mar.
-
-Este repositorio también sirve como espacio de aprendizaje y experimentación para futuras implementaciones, incluyendo:
-
-- Menús dinámicos y categorizados  
-- Galería de platos e instalaciones  
-- Reseñas y testimonios de clientes  
-- Integración de mapas y contacto  
-- Diseño adaptable a dispositivos móviles
-
----
-
-## 🧱 Tecnologías Utilizadas
-
-- **Angular 17** — Framework principal del proyecto  
-- **TypeScript** — Lenguaje base para componentes y lógica  
-- **HTML5 & CSS3** — Estructura y estilos de la interfaz  
-- **SCSS** — Preprocesador CSS para estilos mantenibles  
-- **Angular CLI** — Herramienta para generación y despliegue  
-- **Responsive Design** — Diseño adaptable con media queries  
-- **Animaciones y Transiciones** — Mejora visual de la experiencia del usuario  
-
----
-
-## 📂 Estructura del Proyecto
-
+```bash
+ng serve
 ```
-alcalaparrilla-mar/
-├── src/
-│   ├── app/
-│   │   ├── components/      # Componentes visuales reutilizables
-│   │   ├── pages/           # Páginas principales como menú, contacto, galería
-│   │   ├── services/        # Lógica de negocio y consumo de datos
-│   │   └── app.module.ts    # Módulo raíz de la aplicación
-│   └── assets/              # Imágenes, íconos y recursos estáticos
-├── angular.json             # Configuración del proyecto Angular
-├── package.json             # Dependencias y scripts
-└── README.md                # Documentación del proyecto
+
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
 ```
----
 
-## 🧑‍💻 Autor
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-**Sebastián Vega**  
-Estudiante de Ingeniería de Sistemas — UPTC  
-📧 *Sebastian.vegar2015@gmail.com*  
-🔗 [LinkedIn](https://www.linkedin.com/in/johan-sebastian-vega-ruiz-b1292011b/)
+```bash
+ng generate --help
+```
 
----
+## Building
 
-© 2025 — Sebastian Vega
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

@@ -18,8 +18,8 @@
         </nav>
     </div>
 
-    <div class="row tm-gallery">
-        <div id="tm-gallery-page-menu" class="tm-gallery-page">
+    <div class="row-tm-gallery">
+        <div id="tm-gallery-page-menu">
           <span>Alcalá es:</span>
           <span class="cd-words-wrapper">
             <b>{{ currentWord }}</b>
@@ -28,21 +28,22 @@
     </div>
     <br>
 
-@switch (seccionMenu) {
-    @case ('En') {
-        <!-- gallery page 1 -->
-        <div id="tm-gallery-page-entradas">
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+    <div class="tm-gallery-container">
+        @switch (seccionMenu) {
+          @case ('En') {
+            <div id="tm-gallery-page-entradas" class="tm-gallery-page">
+              <!-- Artículos de entradas -->
+              <article class="tm-gallery-item">
                 <figure>
-                    <img src="img/gallery/01.jpg" alt="Image" class="img-alcala tm-gallery-img" />
-                    <figcaption>
-                        <p class="tm-gallery-price">$18K</p>
-                        <h4 class="tm-gallery-title">Ceviche de camarones.</h4>
-                        <p class="tm-gallery-description">null</p>
-                    </figcaption>
+                  <img src="img/gallery/01.jpg" alt="Ceviche de camarones" class="img-alcala tm-gallery-img" />
+                  <figcaption>
+                    <p class="tm-gallery-price">$18K</p>
+                    <h4 class="tm-gallery-title">Ceviche de camarones</h4>
+                    <p class="tm-gallery-description">null</p>
+                  </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/01.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -52,7 +53,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/01.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -62,7 +63,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/01.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -72,7 +73,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/01.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -86,8 +87,8 @@
     }
     @case ('Pa') {
         <!-- gallery page 2 -->
-        <div id="tm-gallery-page-parrilla">
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+        <div id="tm-gallery-page-parrilla" class="tm-gallery-page">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -98,7 +99,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -109,7 +110,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -120,7 +121,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -131,7 +132,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -142,7 +143,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -153,7 +154,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -164,7 +165,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
             <figure>
                 <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                 <figcaption>
@@ -175,7 +176,7 @@
                 </figcaption>
             </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -186,7 +187,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -197,7 +198,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -207,7 +208,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -217,7 +218,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -228,7 +229,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/02.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -243,8 +244,8 @@
     }
     @case ('Pes') {
         <!-- gallery page 3 -->
-        <div id="tm-gallery-page-pescados_y_mariscos">
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+        <div id="tm-gallery-page-pescados_y_mariscos"  class="tm-gallery-page">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -254,7 +255,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -265,7 +266,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -276,7 +277,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -286,7 +287,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -297,7 +298,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -307,7 +308,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -318,7 +319,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -329,7 +330,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -340,7 +341,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -351,7 +352,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/03.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -365,8 +366,8 @@
     }
     @case ('Adi') {
         <!-- gallery page 4 -->
-        <div id="tm-gallery-page-adicionales">
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+        <div id="tm-gallery-page-adicionales" class="tm-gallery-page">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/04.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -376,7 +377,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/04.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -386,7 +387,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/04.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -396,7 +397,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/04.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -406,7 +407,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/04.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -421,7 +422,7 @@
     @case ('Infa') {
         <!-- gallery page 5 -->
         <div id="tm-gallery-page-infantil">
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/04.jpg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -435,8 +436,8 @@
         }
         @case ("Bebi") {
         <!-- gallery page 6 -->
-        <div id="tm-gallery-page-bebidas">
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+        <div id="tm-gallery-page-bebidas" class="tm-gallery-page">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida1.jpeg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -446,7 +447,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida2.jpeg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -456,7 +457,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida3.webp" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -466,7 +467,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida4.jpeg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -476,7 +477,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida5.jpeg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -486,7 +487,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida6.jpeg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -496,7 +497,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida7.webp" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -506,7 +507,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida8.jpeg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -516,7 +517,7 @@
                     </figcaption>
                 </figure>
             </article>
-            <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+            <article class="tm-gallery-item">
                 <figure>
                     <img src="img/gallery/Bebida9.jpeg" alt="Image" class="img-alcala tm-gallery-img" />
                     <figcaption>
@@ -529,7 +530,11 @@
         </div>
     }
 }
+    </div>
         
+    <br>
+
+    <br>
         
 
 <div class="tm-section tm-container-inner">

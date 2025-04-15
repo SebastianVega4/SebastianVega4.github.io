@@ -1,85 +1,152 @@
-
-		<main>
-			<header class="row tm-welcome-section">
-				<h2 class="col-12 text-center tm-section-title">Contact</h2>
-			</header>
-
-			<div class="tm-container-inner-2 tm-contact-section">
-				<div class="row">
-					<div class="col-md-6">
-						<form action="" method="POST" class="tm-contact-form">
-					        <div class="form-group">
-					          <input type="text" name="name" class="form-control" placeholder="Nombre" required="" />
-					        </div>
-					        
-					        <div class="form-group">
-					          <input type="email" name="email" class="form-control" placeholder="Email" required="" />
-					        </div>
+<main class="tm-main">
+	<header class="tm-section-header">
+	  <h1 class="tm-section-title">Contacto</h1>
+	  <p class="tm-section-subtitle">Estamos aquí para ayudarte</p>
+	</header>
+  
+	<section class="tm-contact-section">
+	  <div class="tm-container">
+		<div class="tm-contact-grid">
+		  <!-- Contact Form -->
+		  <div class="tm-contact-form-container">
+			<h2 class="tm-form-title">Envía un mensaje</h2>
+			<form class="tm-contact-form" (ngSubmit)="handleSubmit()" #form="ngForm">
+			  <div class="tm-form-group">
+				<label for="name" class="tm-form-label">Nombre</label>
+				<input 
+				  type="text" 
+				  id="name" 
+				  name="name" 
+				  class="tm-form-control" 
+				  [(ngModel)]="contactForm.name" 
+				  required
+				  placeholder="Tu nombre completo"
+				>
+			  </div>
+			  
+			  <div class="tm-form-group">
+				<label for="email" class="tm-form-label">Email</label>
+				<input 
+				  type="email" 
+				  id="email" 
+				  name="email" 
+				  class="tm-form-control" 
+				  [(ngModel)]="contactForm.email" 
+				  required
+				  placeholder="tu@email.com"
+				>
+			  </div>
+	  
+			  <div class="tm-form-group">
+				<label for="message" class="tm-form-label">Mensaje</label>
+				<textarea 
+				  id="message" 
+				  name="message" 
+				  rows="5" 
+				  class="tm-form-control" 
+				  [(ngModel)]="contactForm.message" 
+				  required
+				  placeholder="Escribe tu mensaje aquí..."
+				></textarea>
+			  </div>
+		  
+			  <div class="tm-form-actions">
+				<button type="submit" class="tm-btn tm-btn-primary" [disabled]="form.invalid">
+				  Enviar Mensaje
+				</button>
+			  </div>
+			</form>
+		  </div>
+  
+		  <!-- Contact Info -->
+		  <div class="tm-contact-info">
+			<h2 class="tm-info-title">Información de Contacto</h2>
+			
+			<div class="tm-contact-details">
+			  <div class="tm-contact-item">
+				<fa-icon [icon]="icons.mapMarker" class="tm-contact-icon"></fa-icon>
+				<address>5,7442268, -73,0674488, Paipa, Boyacá</address>
+			  </div>
+			  
+			  <div class="tm-contact-item">
+				<fa-icon [icon]="icons.phone" class="tm-contact-icon"></fa-icon>
+				<a href="tel:3124403000" class="tm-contact-link">+57 3124403000</a>
+			  </div>
+			  
+			  <div class="tm-contact-item">
+				<fa-icon [icon]="icons.envelope" class="tm-contact-icon"></fa-icon>
+				<a href="mailto:DeRuanaPorBoyaca@gamil.com" class="tm-contact-link">Email: DeRuanaPorBoyaca</a>
+			  </div>
+			</div>
+  
+			<div class="tm-social-links">
+			  <h3 class="tm-social-title">Síguenos</h3>
+			  <div class="tm-social-icons">
+				<a href="https://www.facebook.com/alcalarestauranteparrillabar" 
+				   class="tm-social-link" 
+				   target="_blank" 
+				   rel="noopener noreferrer">
+				</a>
+				<a href="http://www.instagram.com/alcalarestaurante" 
+				   class="tm-social-link" 
+				   target="_blank" 
+				   rel="noopener noreferrer">
+				</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</section>
+  
+	<!-- Map Section -->
+	<section class="tm-map-section">
+	  <div class="tm-container">
+		<h2 class="tm-section-title">Ubicación</h2>
+		<p class="tm-section-subtitle">Encuéntranos fácilmente</p>
+		
+		<div class="tm-map-container">
+		  <iframe 
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1768.3370908159518!2d-73.06774716080233!3d5.744363228639286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a41ea5940bc83%3A0x80d45ce2040597dd!2sCaba%C3%B1as%20y%20restaurante%20Alcal%C3%A1!5e0!3m2!1ses-419!2sco!4v1697867472322!5m2!1ses-419!2sco" 
+			allowfullscreen="" 
+			loading="lazy" 
+			referrerpolicy="no-referrer-when-downgrade"
+			class="tm-map"
+			title="Ubicación de Cabañas y restaurante Alcalá en Google Maps"
+		  ></iframe>
+		</div>
+	  </div>
+	</section>
+  
+	<!-- FAQ Section -->
+	<section class="tm-faq-section">
+		<div class="tm-container">
+		  <h2 class="tm-section-title">Preguntas Frecuentes</h2>
+		  <p class="tm-section-subtitle">Respuestas a tus dudas</p>
+		  <div class="tm-accordion">
+			@for (faq of faqs; track faq.id; let i = $index) {
+			  <div class="tm-accordion-item">
+				<button 
+				  class="tm-accordion-button" 
+				  (click)="toggleAccordion(i)"
+				  [attr.aria-expanded]="activeIndex === i"
+				>
+				  {{ faq.question }}
+				  <span class="tm-accordion-icon">
+					{{ activeIndex === i ? '−' : '+' }}
+				  </span>
+				</button>
 				
-					        <div class="form-group">
-					          <textarea rows="5" name="message" class="form-control" placeholder="Mensaje" required=""></textarea>
-					        </div>
-					
-					        <div class="form-group tm-d-flex">
-					          <button type="submit" class="tm-btn tm-btn-success tm-btn-right">
-					            Enviar
-					          </button>
-					        </div>
-						</form>
+				@if (activeIndex === i) {
+				  <div class="tm-accordion-panel">
+					<div class="tm-accordion-content" [@slideInOut]>
+					  <p [innerHTML]="faq.answer"></p>
 					</div>
-					<div class="col-md-6">
-						<div class="tm-address-box">
-							<h4 class="tm-info-title tm-text-success">INFO</h4>
-							<address>
-								5,7442268, -73,0674488, Paipa, Boyacá
-							</address>
-							<a href="tel:3124403000" class="tm-contact-link">
-								<i class="fas fa-phone tm-contact-icon"></i>+57 3124403000
-							</a>
-							<a href="mailto:DeRuanaPorBoyaca@gamil.com" class="tm-contact-link">
-								<i class="fas fa-envelope tm-contact-icon" >coreoo</i>
-							
-							</a>
-							<div class="tm-contact-social">
-								<a href="https://www.facebook.com/alcalarestauranteparrillabar" class="tm-social-link"><i class="fab fa-facebook tm-social-icon"></i></a>
-								<a href="http://www.instagram.com/alcalarestaurante" class="tm-social-link"><i class="fab fa-instagram tm-social-icon"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tm-container-inner-2 tm-map-section">
-				<div class="row">
-					<div class="col-12">
-						<div class="tm-map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1768.3370908159518!2d-73.06774716080233!3d5.744363228639286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a41ea5940bc83%3A0x80d45ce2040597dd!2sCaba%C3%B1as%20y%20restaurante%20Alcal%C3%A1!5e0!3m2!1ses-419!2sco!4v1697867472322!5m2!1ses-419!2sco" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tm-container-inner-2 tm-info-section">
-				<div class="row">
-					<!-- FAQ -->
-					<div class="col-12 tm-faq">
-						<h2 class="text-center tm-section-title">FAQs</h2>
-						<p class="text-center">Preguntas frecuentes</p>
-						<div class="tm-accordion">
-							<button class="accordion">1.¿Es rica la comida?</button>
-							<div class="panel">
-							  <p>La mejor de la region.</p>
-							</div>
-							
-							<button class="accordion">2. ¿Es facil llegar?</button>
-							<div class="panel">
-							  <p>No hay pierde como puedes ver en el mapa arriba.</p>
-							</div>
-							
-							<button class="accordion">3.¿Se alquila el lugar?</button>
-							<div class="panel">
-							  <p>Claro para matrimonios etc, tambien alguilamos para estadias en <a href="https://www.booking.com/hotel/co/alcala-cabanas-campestres-paipa.es.html">cabañas y glamping</a> Gracias por preferirnos.</p>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>
-		</main>
+				  </div>
+				}
+			  </div>
+			}
+		  </div>
+		</div>
+	  </section>
+  </main>
